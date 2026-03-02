@@ -7,15 +7,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    private Vector2 lastMoveDirection = Vector2.down;
+
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Debug.Log(horizontal);
+        Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (horizontal < 0)
+
+        Debug.Log(movement);
+
+        if (lastMoveDirection.x <0)
         {
         spriteRenderer.flipX = true;
         }
@@ -23,11 +26,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
         { 
         spriteRenderer.flipX= false;
         }
-        animator.SetFloat("Xinput", horizontal);
-        animator.SetFloat("Yinput", vertical);
+
+        if (movement != Vector2.zero)
+        {
+            lastMoveDirection = movement;
+        }
+
+        animator.SetFloat("Xinput", lastMoveDirection.x);
+        animator.SetFloat("Yinput", lastMoveDirection.y);
+        animator.SetFloat("Speed", movement.magnitude);
 
 
-        rb.linearVelocity = new Vector2 (horizontal, vertical) * speed;
+        rb.linearVelocity = new Vector2 (movement.x, movement.y) * speed;
 
     }
 

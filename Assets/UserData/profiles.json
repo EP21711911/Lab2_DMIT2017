@@ -49,6 +49,17 @@
                 "z": 0.0
             },
             "collectedCoinIDs": []
+        },
+        {
+            "playerName": "WNBDAUYBCSAJJAHBDKUC",
+            "Hearts": 3.0,
+            "Money": 0.0,
+            "PlayerPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "collectedCoinIDs": []
         }
     ]
 }

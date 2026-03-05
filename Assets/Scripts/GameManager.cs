@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
         {
             return;
         }
-        Coins.text = ($" A: {profile.Money.ToString()}");
+        Coins.text = ($" Coins: {profile.Money.ToString()}");
         DrawHearts(profile.Hearts);
         if (profile.Hearts <= 0)
         {

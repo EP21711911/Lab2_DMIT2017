@@ -33,7 +33,9 @@ public class SaveManager : MonoBehaviour {
             //Application.datapath is your assets, and then we select a folder
             folderPath = Path.Combine(Application.dataPath, "UserData");
 
-            savePath = Path.Combine(folderPath, "profiles.json");
+            //savePath = Path.Combine(folderPath, "profiles.json"); //Only for editor
+            savePath = Path.Combine(Application.persistentDataPath, "profilesData.json"); //For build
+            Debug.Log("Save file located at: " + savePath);
             LoadProfiles();
         }
         else
@@ -68,6 +70,10 @@ public class SaveManager : MonoBehaviour {
         else
         {
             Debug.LogError("Could not find save file path");
+
+            profiles = new List<ProfileData>();
+
+            SaveProfiles();
         }
     }
 }

@@ -22,7 +22,6 @@ public class ProfileManager : MonoBehaviour {
 
     ProfileData selectedProfile;
 
-
     void Start()
     {
         //Important to refresh shit

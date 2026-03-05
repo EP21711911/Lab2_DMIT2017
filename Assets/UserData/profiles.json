@@ -1,57 +1,7 @@
 {
     "profiles": [
         {
-            "playerName": "Ez",
-            "Hearts": 1.0,
-            "Money": 30.0,
-            "PlayerPosition": {
-                "x": -62.40996170043945,
-                "y": 46.460906982421878,
-                "z": 0.0
-            },
-            "collectedCoinIDs": [
-                "2",
-                "3",
-                "1",
-                "",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12",
-                "13",
-                "19"
-            ]
-        },
-        {
-            "playerName": "SleepDeprived",
-            "Hearts": 3.0,
-            "Money": 3.0,
-            "PlayerPosition": {
-                "x": 3.4462242126464845,
-                "y": 54.66617965698242,
-                "z": 0.0
-            },
-            "collectedCoinIDs": [
-                "2",
-                "3",
-                "1"
-            ]
-        },
-        {
-            "playerName": "Test",
-            "Hearts": 3.0,
-            "Money": 0.0,
-            "PlayerPosition": {
-                "x": -1.6794767379760743,
-                "y": 47.158843994140628,
-                "z": 0.0
-            },
-            "collectedCoinIDs": []
-        },
-        {
-            "playerName": "WNBDAUYBCSAJJAHBDKUC",
+            "playerName": "A",
             "Hearts": 3.0,
             "Money": 0.0,
             "PlayerPosition": {

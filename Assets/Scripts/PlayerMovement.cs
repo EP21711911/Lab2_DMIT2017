@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    public PlayerAttack playerAttack;
     public float speed = 5;
     private float lastHorizontalAxis = 0;
     public Rigidbody2D rb;
@@ -30,6 +31,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (movement != Vector2.zero)
         {
             lastMoveDirection = movement;
+            playerAttack.SetLastMoveDirection(movement);
         }
 
         animator.SetFloat("Xinput", lastMoveDirection.x);
